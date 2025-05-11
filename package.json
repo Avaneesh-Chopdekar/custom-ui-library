@@ -3,6 +3,17 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/custom-ui-library-umd.cjs",
+  "module": "dist/custom-ui-library.js",
+  "exports": {
+    ".": {
+      "import": "./dist/custom-ui-library.js",
+      "require": "./dist/custom-ui-library-umd.cjs"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -46,6 +57,7 @@
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.30.1",
     "vite": "^6.3.5",
+    "vite-plugin-dts": "^4.5.3",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.1.3"
   },
