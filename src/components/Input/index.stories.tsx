@@ -17,6 +17,8 @@ export const Text: Story = {
   args: {
     type: "text",
     placeholder: "Insert text here",
+    size: "base",
+    emphasis: "low",
   },
 };
 
