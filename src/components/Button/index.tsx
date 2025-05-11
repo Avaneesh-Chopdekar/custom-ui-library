@@ -1,7 +1,7 @@
-export default function Button({ label }: { label: string }) {
-  return (
-    <button className="bg-blue-500 text-white rounded-md px-4 py-1.5">
-      {label}
-    </button>
-  );
+import type { ComponentProps } from "react";
+
+export type ButtonProps = ComponentProps<"button">;
+
+export default function Button({ ...props }: ButtonProps) {
+  return <button className="text-blue-500 cursor-pointer" {...props} />;
 }
